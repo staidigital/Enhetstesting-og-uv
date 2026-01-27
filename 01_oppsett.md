@@ -86,3 +86,19 @@ pytest --version
 Du skal se noe som: `pytest 8.x.x`
 
 ---
+
+### Frivillig: lag enklere alias for venv
+Synes du det er litt klønete å aktivere ditt virtuelle miljø? Vel, la oss lage noen aliaser som gjør dette enklere. Ved å kjøre koden under i terminalen setter vi _venv_ til å være kommando for å starte det virtuelle miljøet og _voff_ for å avslutte det; men du kan selvfølgelig kalle det hva enn du vil. Ups! Dette tar utgangspunktet i at du bruker __zsh__. 
+
+```bash
+echo "alias venv='source .venv/bin/activate'" >> ~/.zshrc && echo "alias voff='deactivate'" >> ~/.zshrc && tail -2 ~/.zshrc
+```
+Som bør gi deg følgende output:
+```bash
+alias venv='source .venv/bin/activate'
+alias voff='deactivate'
+```
+For å aktivere de nye aliasene dine, må du kjører 
+```bash
+source ~/.zshrc
+```
