@@ -29,3 +29,12 @@ pytest test_kalkulator.py -v
 
 ### Oppgave
 Lag funksjoner for subtraksjon, divisjon og multiplikasjon i `kalkulator.py` og skriv tilhørende tester for disse funksjonene. Gjerne legg inn noen feil, slik at du får se hva som skjer når ting går galt. 
+**Utfordring:** Hva skjer hvis vi deler på null? Hvordan kan vi teste dette?
+
+## Lage coverage-rapport
+Om man ønsker en litt mer detaljert oversikt over testingen, kan vi bruke pytest-cov til å lage en html-fil med litt flere detaljer. 
+
+```bash
+pytest --cov=. --cov-report=html
+```
+
